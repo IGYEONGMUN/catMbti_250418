@@ -68,7 +68,7 @@ const Result = () => {
   // get 함수 이용 키값을 인자값으로 줘서 사용
   const mbti = SearchParams.get("mbti");
   useEffect(() => {
-    const result = resultData.find((item) => item.best === mbti);
+    const result = resultdata.find((item) => item.best === mbti);
     setResultData(result);
   }, [mbti]);
 
