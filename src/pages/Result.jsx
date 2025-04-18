@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Button } from "react-bootstrap";
 import { resultdata } from "../assets/resultdata";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import KakaoShareButton from "../components/KakaoShareButton";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -43,6 +44,13 @@ const LogoImg = styled.div`
     height: 350px;
     border: 4px solid var(--border-box);
     /* border-radius: 50%; */
+  }
+`;
+const ButtonGroup = styled.div`
+  display: flex;
+  gap: 14px;
+  & > button[type="button"] {
+    font-size: 2rem;
   }
 `;
 
@@ -90,7 +98,12 @@ const Result = () => {
             <br /> {resultData?.best}형 {resultData?.name}
           </p>
         </Desc>
-        <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+        <ButtonGroup>
+          <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
+          <Button variant="warning">
+            <KakaoShareButton />
+          </Button>
+        </ButtonGroup>
       </Contents>
     </Wrapper>
   );
