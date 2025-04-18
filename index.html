@@ -4,12 +4,32 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <!-- 오픈그라프 - url 자체를 공유할때 -->
+    <!-- url을 생으로 공유할때 그 이미지 -->
+    <meta
+      property="og:image"
+      content="https://catmbtichoose.netlify.app/cat/abyssinian.jpg"
+    />
+    <meta property="og:url" content="https://catmbtichoose.netlify.app/" />
+    <title>고양이 MBTI</title>
   </head>
   <body>
     <div id="root"></div>
     <!-- sdk -->
+    <!-- 자체적인 요소 마지막에 외부 라이브러리를 먼저 불러오셈 -->
     <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.js"></script>
+    <ins
+      class="kakao_ad_area"
+      style="display: none"
+      data-ad-unit="DAN-cIZYudmkGcq7vJGt"
+      data-ad-width="320"
+      data-ad-height="100"
+    ></ins>
+    <script
+      type="text/javascript"
+      src="//t1.daumcdn.net/kas/static/ba.min.js"
+      async
+    ></script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
