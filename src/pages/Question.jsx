@@ -28,6 +28,10 @@ const Title = styled.div`
   padding: 8px 14px;
   border-radius: 10px;
   margin-bottom: 80px;
+
+  @media screen and (max-width: 850px) {
+    font-size: 2.5rem;
+  }
 `;
 
 const ButtonGroup = styled.div`
@@ -38,6 +42,12 @@ const ButtonGroup = styled.div`
     height: 200px;
     font-size: 2.5rem;
     border-radius: 8px;
+  }
+  @media screen and (max-width: 850px) {
+    & > button[type="button"] {
+      width: 300px;
+      font-size: 2.3rem;
+    }
   }
 `;
 
