@@ -6,7 +6,8 @@ import { Button } from "react-bootstrap";
 // 윈도우 객체 안에 sdk통해서 카카오 객체를 정의함
 const { Kakao } = window;
 
-const KakaoShareButton = () => {
+const KakaoShareButton = ({ data }) => {
+  console.log(data);
   const url = "catmbtichoose.netlify.app";
   // 리퍼러값/ 공유한 사람의 마지막 페이지
   const resultURL = window.location.href;
@@ -21,10 +22,8 @@ const KakaoShareButton = () => {
       objectType: "feed",
       content: {
         title: "예비집사 판별기 결과",
-        description:
-          "예비집사님이 고양이를 키운다면 잘 맞는 고양이는 먼치킨입니다.",
-        imageUrl:
-          "https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        description: `예비집사님이 고양이를 키운다면 잘 맞는 고양이는 ${data.name}입니다.`,
+        imageUrl: `${url}${data.image}`,
         // 원래 카카오 디벨로퍼로 가게되어있는데 우리가 배포한 사이트로 변경해줘야됨
         link: {
           mobileWebUrl: resultURL,

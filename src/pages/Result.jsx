@@ -80,7 +80,6 @@ const Result = () => {
     setResultData(result);
   }, [mbti]);
 
-  console.log(resultData);
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
@@ -100,9 +99,7 @@ const Result = () => {
         </Desc>
         <ButtonGroup>
           <Button onClick={handleClickButton}>테스트 다시 시작하기</Button>
-          <Button variant="warning">
-            <KakaoShareButton />
-          </Button>
+          <KakaoShareButton data={resultData} />
         </ButtonGroup>
       </Contents>
     </Wrapper>
