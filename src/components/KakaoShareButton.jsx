@@ -10,7 +10,6 @@ const KakaoShareButton = () => {
   const url = "catmbtichoose.netlify.app";
   // 리퍼러값/ 공유한 사람의 마지막 페이지
   const resultURL = window.location.href;
-  console.log(url, resultURL);
   useEffect(() => {
     // 중간에 초기화 해도 에러 발생방지용으로 기존 캐시값 삭제함수 - 초기화
     Kakao.cleanup();
