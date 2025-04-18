@@ -8,7 +8,7 @@ const { Kakao } = window;
 
 const KakaoShareButton = ({ data }) => {
   console.log(data);
-  const url = "http://catmbtichoose.netlify.app";
+  const url = "https://catmbtichoose.netlify.app";
   // 리퍼러값/ 공유한 사람의 마지막 페이지
   const resultURL = window.location.href;
   useEffect(() => {
